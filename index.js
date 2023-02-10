@@ -211,8 +211,4 @@ app.put("/customer/order/:id", checkJwt, async (req, res) => {
     }
 })
 
-app.get("/food", async(req, res) => {
-    res.send("Its working!!!")
-})
-    
 app.listen(process.env.PORT, () => console.log("server listening on port " + process.env.PORT))
