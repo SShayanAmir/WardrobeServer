@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express();
 const cors = require("cors");
-import pg from "pg";
+const pg = require("pg");
 const pool = new pg.Pool();
 
 const s3 = require('./s3.js')
