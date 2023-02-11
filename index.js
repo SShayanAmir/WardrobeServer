@@ -1,8 +1,11 @@
 const express = require("express")
 const app = express();
-const cors = require("cors"); 
-const pool = require("./db");
+const cors = require("cors");
+import pg from "pg";
+const pool = new pg.Pool();
+
 const s3 = require('./s3.js')
+
 
 require("dotenv").config();
 
