@@ -36,6 +36,7 @@ app.post("/admin/brand", checkJwt, checkPermissions,  async (req, res) => {
     try {
         const {coverTitle} = req.body;
         const {galleryPhoto} = req.body;
+        console.log("connected to this url")
 
         const newBrand = await pool.query("INSERT INTO brand (coverTitle, galleryPhoto) VALUES($1, $2) RETURNING *", [coverTitle, galleryPhoto])
         res.json(newBrand.rows[0])
